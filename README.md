@@ -16,7 +16,7 @@ The six notebooks below cover the five experiments and the longer-training follo
 
 | Report material | Notebook | Saved run coverage |
 | --- | --- | --- |
-| Experiment 1 — one spare representation dimension | [01_experiment1_spare_seat_3seeds.ipynb](notebooks/01_experiment1_spare_seat_3seeds.ipynb) | Three seeds; five- and six-output comparisons; completed recovery tables and figure. |
+| Experiment 1 — one spare representation dimension | [01_experiment1_spare_seat_3seeds.ipynb](notebooks/01_experiment1_spare_seat_3seeds.ipynb) | Three seeds; five- and six-output comparisons; completed recovery tables and Figure 1 with updated labels. |
 | Experiment 2 — perturbing the originally designated content | [02_experiment2_perturbed_content.ipynb](notebooks/02_experiment2_perturbed_content.ipynb) | Three seeds for each invariant/perturbed comparison across the paper's four cases, at 10,000 updates. |
 | Experiment 2 — Case 3 longer-training follow-up | [02_experiment2_perturbed_content_longer_training.ipynb](notebooks/02_experiment2_perturbed_content_longer_training.ipynb) | One fixed data-generating setting and one paired training seed, evaluated at 10,000, 30,000 and 60,000 updates. |
 | Experiment 3 — non-Gaussian distributions | [03_experiment3_nongaussian_world.ipynb](notebooks/03_experiment3_nongaussian_world.ipynb) | Three seeds, five and six outputs, 10,000 updates; saved recovery and forward-fit results. |
@@ -31,14 +31,9 @@ The six notebooks below cover the five experiments and the longer-training follo
 - Experiment 5 also retains exploratory output-head/sigmoid comparisons. Those are outside the final report's Experiment 5 discussion; use the **reflection/redraw augmentation comparison** for that discussion.
 - Experiment 1 includes a linear toy demonstration in addition to the full pipeline. This archived version contains latent-recovery probes, but no saved forward-fit linearity diagnostics. Such a diagnostic should not be attributed to this notebook without an accompanying completed run.
 
-### Pending replacements
+### Pending replacement
 
-This is the current executed-results archive. Two prepared revisions will replace their corresponding notebooks once executed and checked.
-
-1. **Experiment 1** — update Figure 1's title, price notation, probe-score labels and legend using a plotting-only cell.
-2. **Experiment 2's Case 3 follow-up** — extend the fixed setting to three paired training seeds and generate the report's recovery figure directly from the completed results, with mean and sample standard deviation across seeds.
-
-The prepared revisions are not presented here as completed runs. The one-seed Case 3 outputs currently archived remain one-seed results.
+**Experiment 2's Case 3 follow-up** — a prepared revision extends the fixed setting to three paired training seeds and generates the report's recovery figure directly from the completed results, with mean and sample standard deviation across seeds. It will replace the corresponding notebook once executed and checked. The Case 3 outputs currently archived remain one-seed results.
 
 ## Viewing and running
 
