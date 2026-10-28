@@ -1,0 +1,65 @@
+{
+  "description": "Executed notebooks preserved byte-for-byte from supplied uploads. Seed counts describe the report-relevant comparisons, not every exploratory section.",
+  "notebooks": [
+    {
+      "path": "notebooks/01_experiment1_spare_seat_3seeds.ipynb",
+      "uploaded_filename": "01_experiment1_spare_seat_3seeds (1).ipynb",
+      "report_material": "Experiment 1",
+      "main_comparison_seed_count": 3,
+      "size_bytes": 344587,
+      "sha256": "52f6423b161927eaefc7b1ed75dbbf4ccbfe39931940427b4a60b2bee44338d2",
+      "git_blob_sha": "2746f9ef907ec210ab74f5a7bf485650e39cecf6",
+      "saved_output_cells": 8
+    },
+    {
+      "path": "notebooks/02_experiment2_perturbed_content.ipynb",
+      "uploaded_filename": "02_experiment2_perturbed_content_run (1).ipynb",
+      "report_material": "Experiment 2 main four-case comparison",
+      "main_comparison_seed_count": 3,
+      "size_bytes": 562426,
+      "sha256": "98968415f5df948fde68871a4e65ffd06392f5bce2b64efdbc85e5636d08437f",
+      "git_blob_sha": "02eba9e6fba9bc3cfe9ccbacc954ee936c5bb73a",
+      "saved_output_cells": 11
+    },
+    {
+      "path": "notebooks/02_experiment2_perturbed_content_longer_training.ipynb",
+      "uploaded_filename": "02_experiment2_perturbed_content_longer_training(1).ipynb",
+      "report_material": "Experiment 2 Case 3 longer-training follow-up",
+      "main_comparison_seed_count": 1,
+      "size_bytes": 523437,
+      "sha256": "ac4bbbf10e0607a9bacd4c35b48ec1fda8af6ba595e6bf91610256b62293a277",
+      "git_blob_sha": "82774101ed6ef430fcbc94c24fca210d614de3db",
+      "saved_output_cells": 14
+    },
+    {
+      "path": "notebooks/03_experiment3_nongaussian_world.ipynb",
+      "uploaded_filename": "03_experiment3_nongaussian_world (1).ipynb",
+      "report_material": "Experiment 3",
+      "main_comparison_seed_count": 3,
+      "size_bytes": 224615,
+      "sha256": "173ea20befcfbcbd16dfb7da21eeb3bbc71182b7494a7ecbf0a39bc2b07f6f42",
+      "git_blob_sha": "d6e8ae2ad9b38f611ea1a13616cbad4c2f6612c5",
+      "saved_output_cells": 8
+    },
+    {
+      "path": "notebooks/04_experiment4_finite_budget.ipynb",
+      "uploaded_filename": "04_experiment4_finite_budget (1).ipynb",
+      "report_material": "Experiment 4",
+      "main_comparison_seed_count": 3,
+      "size_bytes": 548453,
+      "sha256": "64286ea3aafac914f544262927a789677feb77c3adf6b8b9aea853daa5324812",
+      "git_blob_sha": "595cdde6aa4747ad143c5128f1a6cbe017dd8f48",
+      "saved_output_cells": 12
+    },
+    {
+      "path": "notebooks/05_experiment5_nonlinear_heads_reflection_gaussian.ipynb",
+      "uploaded_filename": "05_experiment5_nonlinear_heads_reflection_gaussian (2).ipynb",
+      "report_material": "Experiment 5 reflection/redraw",
+      "main_comparison_seed_count": 3,
+      "size_bytes": 1342254,
+      "sha256": "5386820e4bf0ce0b0cffddeebfc324ae1d8ad3b3be31cc3a5ce74c74a5704372",
+      "git_blob_sha": "43ebcbb3018f72f3adef358ef4f0597e03b24d48",
+      "saved_output_cells": 13
+    }
+  ]
+}

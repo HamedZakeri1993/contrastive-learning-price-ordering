@@ -1,0 +1,12 @@
+.ipynb_checkpoints/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.DS_Store
+
+# Generated training caches, model checkpoints and evaluation arrays.
+extension_*/
+*.pt
+*.pth
+*.npz
