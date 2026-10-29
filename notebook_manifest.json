@@ -3,13 +3,13 @@
   "notebooks": [
     {
       "path": "notebooks/01_experiment1_spare_seat_3seeds.ipynb",
-      "uploaded_filename": "01_experiment1_spare_seat_3seeds (2).ipynb",
+      "uploaded_filename": "01_experiment1_spare_seat_3seeds_forward_fits(1).ipynb",
       "report_material": "Experiment 1",
       "main_comparison_seed_count": 3,
-      "size_bytes": 339252,
-      "sha256": "fe5acbe8d9e47f752bf704bf63f1f684234a54f8ef809c6764f5ac95d1ec90a4",
-      "git_blob_sha": "eec61360cc70c90dd536856da4cfbf4a782555b8",
-      "saved_output_cells": 9
+      "size_bytes": 376610,
+      "sha256": "5ef862b95a602bd10a4acbc6390c0e430fde78d073d65f869b557de403aa2b6b",
+      "git_blob_sha": "8c974516f8eeab34d577ceca7dfddc3908305154",
+      "saved_output_cells": 10
     },
     {
       "path": "notebooks/02_experiment2_perturbed_content.ipynb",
