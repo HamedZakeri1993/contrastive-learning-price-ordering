@@ -23,13 +23,13 @@
     },
     {
       "path": "notebooks/02_experiment2_perturbed_content_longer_training.ipynb",
-      "uploaded_filename": "02_experiment2_perturbed_content_longer_training(1).ipynb",
+      "uploaded_filename": "02_experiment2_perturbed_content_longer_training (1).ipynb",
       "report_material": "Experiment 2 Case 3 longer-training follow-up",
-      "main_comparison_seed_count": 1,
-      "size_bytes": 523437,
-      "sha256": "ac4bbbf10e0607a9bacd4c35b48ec1fda8af6ba595e6bf91610256b62293a277",
-      "git_blob_sha": "82774101ed6ef430fcbc94c24fca210d614de3db",
-      "saved_output_cells": 14
+      "main_comparison_seed_count": 3,
+      "size_bytes": 1095490,
+      "sha256": "787b6fb74e7a79585ee20eccd61955551b868a618004281d5612dae797ead410",
+      "git_blob_sha": "ec304d27579d5f63f64003439e59969170d8ef1c",
+      "saved_output_cells": 15
     },
     {
       "path": "notebooks/03_experiment3_nongaussian_world.ipynb",
