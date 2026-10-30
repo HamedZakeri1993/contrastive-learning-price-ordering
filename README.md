@@ -1,48 +1,49 @@
 # Contrastive learning and price ordering
 
-Executed simulation notebooks accompanying Hamed Zakeri's report on *Self-Supervised Learning with Data Augmentations Provably Isolates Content from Style* (von Kügelgen et al., NeurIPS 2021).
+Executed simulation notebooks accompanying Hamed Zakeri's report on *Self-Supervised Learning with Data Augmentations Provably Isolates Content from Style* ([von Kügelgen et al., NeurIPS 2021](https://arxiv.org/abs/2106.04619)).
 
-The report studies the proposed price of a latent quantity,
+The report studies the price of a latent quantity with finite, positive variance,
 
 $$
 \pi(q)=\frac{\operatorname{Var}(q(\tilde z)-q(z))}{\operatorname{Var}(q(z))},
 $$
 
-and the hypothesis that lower-priced information is preferentially retained. A benchmark proposition proves an ordering under restricted linear–Gaussian assumptions. These notebooks assess recovery under finite InfoNCE training in settings that also depart from those assumptions.
+and the hypothesis that lower-priced information is preferentially retained. This price equals normalized mean-square change when the change has mean zero. The report's benchmark proposition establishes a subspace ordering under restricted linear–Gaussian assumptions and a fixed-total-variance constraint. The notebooks assess recovery after finite contrastive training, including settings outside that benchmark.
 
 ## Notebooks and saved results
 
-The six notebooks below cover the five experiments and the longer-training follow-up within Experiment 2. **The notebooks are preserved exactly as uploaded, including their saved outputs.** Only their filenames have been normalised for this repository. Their original upload names and checksums are recorded in [notebook_manifest.json](notebook_manifest.json).
+The six notebooks cover five experiments and the longer-training follow-up within Experiment 2. Their explanations have been revised to match the implemented designs and saved results. **All code cells, saved outputs, execution counts, cell IDs, and metadata are unchanged.** The original files are preserved in the [timestamped backup](backups/2026-10-30_11-58-12-0400/). Original upload names, current checksums, backup paths, and preservation checks are recorded in [notebook_manifest.json](notebook_manifest.json).
 
-| Report material | Notebook | Saved run coverage |
+| Report material | Notebook | Saved report-relevant results |
 | --- | --- | --- |
-| Experiment 1 — one spare representation dimension | [01_experiment1_spare_seat_3seeds.ipynb](notebooks/01_experiment1_spare_seat_3seeds.ipynb) | Three seeds; five- and six-output comparisons; completed recovery and forward-fit tables for all seven settings, plus Figure 1 with updated labels. |
-| Experiment 2 — perturbing the originally designated content | [02_experiment2_perturbed_content.ipynb](notebooks/02_experiment2_perturbed_content.ipynb) | Three seeds for each invariant/perturbed comparison across the paper's four cases, at 10,000 updates. |
-| Experiment 2 — Case 3 longer-training follow-up | [02_experiment2_perturbed_content_longer_training.ipynb](notebooks/02_experiment2_perturbed_content_longer_training.ipynb) | One fixed data-generating setting and three paired training seeds, evaluated at 10,000, 30,000 and 60,000 updates; saved recovery figure with means and sample standard deviations. |
-| Experiment 3 — non-Gaussian distributions | [03_experiment3_nongaussian_world.ipynb](notebooks/03_experiment3_nongaussian_world.ipynb) | Three seeds, five and six outputs, 10,000 updates; saved recovery and forward-fit results. |
-| Experiment 4 — training budget and price differences | [04_experiment4_finite_budget.ipynb](notebooks/04_experiment4_finite_budget.ipynb) | Three seeds per reported comparison; saved recovery and forward-fit results for every condition and budget. |
-| Experiment 5 — invariant functions under reflection versus redraw | [05_experiment5_nonlinear_heads_reflection_gaussian.ipynb](notebooks/05_experiment5_nonlinear_heads_reflection_gaussian.ipynb) | Three seeds at 10,000, 30,000 and 60,000 updates. The report uses the Gaussian reflection/redraw comparison. |
+| Experiment 1 — one spare representation dimension | [01_experiment1_spare_seat_3seeds.ipynb](notebooks/01_experiment1_spare_seat_3seeds.ipynb) | Seven settings, three seeds, 10,000 updates: 21 runs, recovery and forward-fit tables, and Figure 1. |
+| Experiment 2 — perturbing original content | [02_experiment2_perturbed_content.ipynb](notebooks/02_experiment2_perturbed_content.ipynb) | Four settings, two paired content conditions, three seeds, 10,000 updates: 24 main-comparison runs. |
+| Experiment 2 — longer training in Case 3 | [02_experiment2_perturbed_content_longer_training.ipynb](notebooks/02_experiment2_perturbed_content_longer_training.ipynb) | One fixed world, three paired training seeds, two conditions: six trajectories evaluated at 10,000, 30,000, and 60,000 updates, plus Figure 2. |
+| Experiment 3 — non-Gaussian latent factors | [03_experiment3_nongaussian_world.ipynb](notebooks/03_experiment3_nongaussian_world.ipynb) | Five and six outputs, three seeds, 10,000 updates: six runs with recovery and forward-fit results. |
+| Experiment 4 — training budget and price differences | [04_experiment4_finite_budget.ipynb](notebooks/04_experiment4_finite_budget.ipynb) | Eight condition/budget combinations and three seeds: 18 trajectories and 24 evaluations. |
+| Experiment 5 — reflection versus independent redraw | [05_experiment5_nonlinear_heads_reflection_gaussian.ipynb](notebooks/05_experiment5_nonlinear_heads_reflection_gaussian.ipynb) | Two augmentation rules, three seeds, and evaluations at 10,000, 30,000, and 60,000 updates: six report-relevant trajectories and 18 evaluations. |
 
-### How to read the saved notebooks
+### Scope of the saved material
 
-- In Experiment 3, introductory references to one seed, two trainings or cleared outputs are stale. The code and saved outputs show three seeds and six completed runs. Its JSON cache reuses completed results; it does not resume an interrupted optimiser trajectory.
-- In Experiment 4, the introductory and metadata notes saying that training has not been executed are stale. Completed three-seed tables, figures and forward-fit results are embedded.
-- Experiment 2 also retains an independent single-seed strength sweep and historical tables. The report's four-case results come from the **paired invariant/perturbed comparison**, not the historical tables.
-- Experiment 5 also retains exploratory output-head/sigmoid comparisons. Those are outside the final report's Experiment 5 discussion; use the **reflection/redraw augmentation comparison** for that discussion.
-- Experiment 1's preparation notes and `prepared_for_user_execution` metadata predate this completed rerun. All 21 neural runs and their forward-fit results are saved; the optional linear toy is skipped by default.
+- Experiment 1's optional linear toy is disabled by default. Its 21 neural runs and forward fits are complete.
+- The main Experiment 2 notebook also contains an independent single-seed strength sweep and historical static tables. The report's main comparison uses the paired invariant/perturbed table. The longer-training notebook holds the world fixed, so its seed variation has a different interpretation.
+- Experiments 3 and 4 include completed three-seed results. Experiment 3 caches completed scores; Experiment 4 supports resuming training from saved model, optimizer, and random-generator states.
+- Experiment 5 also contains an exploratory identity-versus-sigmoid output-head comparison. Including that comparison, the notebook contains 12 trajectories and 36 evaluations; the report discusses the reflection/redraw subset.
+
+Historical preparation labels in code comments and notebook metadata are retained as part of the unchanged execution record. The Markdown explanations describe the saved completed experiments.
 
 ## Viewing and running
 
-Saved tables and figures can be inspected without rerunning training. To rerun a notebook, open it in Jupyter or Google Colab and use its settings and run instructions. The Python dependencies are listed in [requirements.txt](requirements.txt); the saved setup outputs record the environments used for the runs. The dependency list is unpinned and is not an exact environment lockfile.
+Open the notebooks on GitHub, in Jupyter, or in Google Colab to inspect their saved tables and figures without rerunning training. For a fresh execution, run the cells in order and follow the settings described in each notebook. [requirements.txt](requirements.txt) lists the Python dependencies; it is unpinned and is not an exact environment lockfile. Saved setup outputs record the versions used for the archived runs.
 
-The notebooks are self-contained adaptations and do not require a local copy of the original repository. Full neural training is substantially more expensive than viewing the saved outputs. Some Run All paths also execute exploratory sections, particularly in Experiment 5.
+The notebooks are self-contained adaptations and do not require a local checkout of the original implementation. Full training and probe fitting are substantially more expensive than viewing saved outputs. Run All also executes enabled exploratory sections, especially in Experiment 5.
 
-The notebooks reference local/Colab result directories containing CSVs, JSON results and, in some versions, model checkpoints and encoded arrays. **Those directories are not bundled in this archive.** Existing compatible caches can be reused only if available in the running environment; saved notebook outputs alone do not contain model checkpoints. Fresh execution without those caches may rerun training. Preserve the result directories in persistent storage when running in Colab.
+The external result directories, CSV/JSON caches, model checkpoints, and encoded arrays referenced by the notebooks are **not bundled in this repository**. Existing compatible caches can be reused only when available in the running environment. Saved notebook outputs alone cannot resume training. Keep generated result directories in persistent storage when running in Colab; fresh execution without compatible caches may retrain the models.
 
-Recovery probes predict latent factors or functions from representations. Forward fits predict representations from latents and assess approximate linearity of the composite map. Probe recovery does not establish global optimality of the trained models.
+Recovery probes predict latent factors or functions from representations. Forward fits predict representations from latents and assess approximate affine structure on the sampled distribution; the linear regression fits include an intercept. High recovery does not prove exact identifiability, and near-zero probe scores do not establish complete absence of information. None of these diagnostics proves global optimality of the trained encoder.
 
-## Original work
+## References and provenance
 
-The simulation structure was studied using the paper's released implementation, particularly `main_mlp.py` in [ysharma1126/ssl_identifiability](https://github.com/ysharma1126/ssl_identifiability). The notebooks record the source repository and source commit in their metadata.
-
-Reference: von Kügelgen et al. (2021), *Self-Supervised Learning with Data Augmentations Provably Isolates Content from Style*, NeurIPS.
+- von Kügelgen et al. (2021). *Self-Supervised Learning with Data Augmentations Provably Isolates Content from Style*. Advances in Neural Information Processing Systems 34. [Paper](https://arxiv.org/abs/2106.04619).
+- [Released simulation implementation](https://github.com/ysharma1126/ssl_identifiability/tree/ee46a35acf68461172b3eaeeb1d6fbc779fce661), particularly `main_mlp.py`, `spaces.py`, and `losses.py`. The notebooks record the upstream repository and commit in their metadata. The price-ordering experiments extend that simulation design.
+- [Original notebook snapshot and backup index](backups/2026-10-30_11-58-12-0400/README.md), taken before the Markdown cleanup.
